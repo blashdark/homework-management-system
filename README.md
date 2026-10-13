@@ -13,6 +13,6 @@ Homework-management system for lecturers and students.
 ## Documentation
 
 - `docs/mom/`: Meeting minutes.
-- `docs/analysis/`: Domain, business model, pain points, prioritization, and solution analysis.
+- `docs/analysis/customer-problem-analysis.md`: Domain, business model, pain points, prioritization, and solution analysis.
 - `docs/diagrams/use-case/`: Use case diagram source files.
 - `docs/diagrams/exports/`: Exported PNG/PDF diagrams.
