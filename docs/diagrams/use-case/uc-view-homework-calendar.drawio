@@ -1,0 +1,64 @@
+<mxfile host="Electron" modified="2026-10-16T13:06:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="UC_View_Calendar" name="Use Case - View Homework Calendar">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- System Boundary -->
+        <mxCell id="sys_boundary" value="Homework Management System - Homework Calendar" style="shape=rect;html=0;align=center;verticalAlign=top;fontStyle=1;fontSize=14;strokeColor=#475569;fillColor=#f8fafc;strokeWidth=2;dashed=1;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="500" height="420" as="geometry" />
+        </mxCell>
+
+        <!-- Actors -->
+        <mxCell id="actor_lecturer" value="Lecturer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;outlineConnect=0;fontStyle=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="120" width="45" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="actor_student" value="Student" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;outlineConnect=0;fontStyle=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="300" width="45" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Primary Use Cases: Shared Goals -->
+        <mxCell id="uc_view_calendar" value="View Homework Calendar" style="ellipse;html=0;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="90" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_filter_calendar" value="Filter Calendar Events" style="ellipse;html=0;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="210" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_view_milestone" value="View Homework Details" style="ellipse;html=0;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="330" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Associations: Lecturer (Đường thẳng chuẩn UML, không mũi tên) -->
+        <mxCell id="edge_l_calendar" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" source="actor_lecturer" target="uc_view_calendar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_l_filter" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" source="actor_lecturer" target="uc_filter_calendar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_l_milestone" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" source="actor_lecturer" target="uc_view_milestone" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Associations: Student (Đường thẳng chuẩn UML, không mũi tên) -->
+        <mxCell id="edge_s_calendar" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="actor_student" target="uc_view_calendar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_s_filter" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="actor_student" target="uc_filter_calendar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_s_milestone" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="actor_student" target="uc_view_milestone" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

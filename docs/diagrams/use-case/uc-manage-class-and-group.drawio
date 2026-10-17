@@ -1,0 +1,86 @@
+<mxfile host="Electron" modified="2026-10-16T13:00:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="UC_Manage_Class_Group" name="Use Case - Manage Class and Group">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- System Boundary -->
+        <mxCell id="sys_boundary" value="Homework Management System - Class &amp; Group Management" style="shape=rect;html=0;align=center;verticalAlign=top;fontStyle=1;fontSize=14;strokeColor=#475569;fillColor=#f8fafc;strokeWidth=2;dashed=1;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="500" height="650" as="geometry" />
+        </mxCell>
+
+        <!-- Actors -->
+        <mxCell id="actor_lecturer" value="Lecturer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;outlineConnect=0;fontStyle=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="190" width="45" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="actor_student" value="Student" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;outlineConnect=0;fontStyle=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="450" width="45" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases: Lecturer Exclusive -->
+        <mxCell id="uc_manage_class" value="Manage Classes" style="ellipse;html=0;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="95" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_add_student_class" value="Add Student to Class" style="ellipse;html=0;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="195" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases: Shared (Lecturer & Student) -->
+        <mxCell id="uc_manage_group" value="Manage Groups" style="ellipse;html=0;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="295" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_add_member_group" value="Add Member to Group" style="ellipse;html=0;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="395" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases: Student Exclusive -->
+        <mxCell id="uc_join_class" value="Join Class via Invite Link" style="ellipse;html=0;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="495" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc_join_group" value="Join Group" style="ellipse;html=0;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="595" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Associations: Lecturer -->
+        <mxCell id="edge_l_class" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor_lecturer" target="uc_manage_class" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_l_add_class" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor_lecturer" target="uc_add_student_class" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_l_manage_group" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor_lecturer" target="uc_manage_group" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_l_add_member" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor_lecturer" target="uc_add_member_group" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Associations: Student -->
+        <mxCell id="edge_s_manage_group" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor_student" target="uc_manage_group" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_s_add_member" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor_student" target="uc_add_member_group" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_s_join_class" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor_student" target="uc_join_class" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_s_join_group" style="endArrow=none;html=0;strokeWidth=1.5;strokeColor=#334155;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="actor_student" target="uc_join_group" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
